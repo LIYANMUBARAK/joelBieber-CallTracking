@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sample Site</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://dashboard.kashcallerai.com/static/css/bootstrap5.css" rel="stylesheet">
+  <link href="https://dashboard.kashcallerai.com/static/css/select2.min.css" rel="stylesheet">
+  <title>Call Tracking</title>
+</head>
+<body>
+
+  <div class="container">
+    <form class="mt-5" action="/formSubmit" method="POST">
+        <div  class="container">
+        <div class="row row-cols-2 justify-content-between g-3">
+            <div class="col">
+                <label for="phoneNumber" class="form-label" >Phone Number</label>
+                <input type="number" class="form-control form-control-lg" id="phoneNumber" name="phoneNumber" placeholder="Please Enter the phoneNumber" required><br><br>
+                
+            </div>
+           
+            <div class="col">
+                <label for="sourceTag" class="form-label" >Source Tag</label>
+                <input type="text" class="form-control form-control-lg" id="sourceTag" name="sourceTag" placeholder="Please Enter the Source Tag" required><br><br>
+                
+            </div>
+
+            <div class="col">
+                <label for="campaignTag" class="form-label" >Campaign Tag</label>
+                <input type="text" class="form-control form-control-lg" id="campaignTag" name="campaignTag" placeholder="Please Enter the Campaign Tag" required><br><br>
+                
+            </div>
+
+            <div class="col">
+                <label for="vendorTag" class="form-label" >Vendor Tag</label>
+                <input type="text" class="form-control form-control-lg" id="vendorTag" name="vendorTag" placeholder="Please Enter the Vendor Tag" required><br><br>
+                
+            </div>
+
+            <div class="col">
+                <label for="locationTag" class="form-label" >Location Tag</label>
+                <input type="text" class="form-control form-control-lg" id="locationTag" name="locationTag" placeholder="Please Enter the Location Tag" required><br><br>
+                
+            </div>
+
+            <div class="col">
+                <label for="caseTypeTag" class="form-label" >Case Type Tag</label>
+                <input type="text" class="form-control form-control-lg" id="caseTypeTag" name="caseTypeTag" placeholder="Please Enter the Case Type Tag" required><br><br>
+                
+            </div>
+
+            <div class="col">
+                <label for="mediumTag" class="form-label" >Medium Tag</label>
+                <input type="text" class="form-control form-control-lg" id="mediumTag" name="mediumTag" placeholder="Please Enter the Medium Tag" required><br><br>
+                
+            </div>
+          
+            
+        </div>
+        <div class=" text-center">
+            <button type="submit" value="Submit" class="btn btn-primary mt-3">Submit</button>
+
+        </div>
+  </div>
+    
+</body>
+</html>
