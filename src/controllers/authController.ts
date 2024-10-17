@@ -142,7 +142,7 @@ export async function initiateAuth(req: Request, res: Response) {
             ];
 
             await connection.execute(insertSql, insertValues);
-            const successHtml = fs.readFileSync(path.join(__dirname, '../html', 'accessTokenFetchSuccess.html'), 'utf-8');
+            const successHtml = fs.readFileSync(path.join(__dirname, '../public/html', 'accessTokenFetchSuccess.html'), 'utf-8');
           
             // Replace placeholders with actual data
             const responseHtml = successHtml
