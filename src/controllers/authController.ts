@@ -65,7 +65,7 @@ export async function initiateAuth(req: Request, res: Response) {
     try {
         // Serve the HTML form
 
-    res.sendFile(path.join(__dirname, '../html', 'index.html'));
+    res.sendFile(path.join(__dirname, '../public/html', 'index.html'));
 
 
 
@@ -96,7 +96,7 @@ export async function initiateAuth(req: Request, res: Response) {
             // If the above function doesn't throw an error, we have a valid access token
             console.log(`Valid access token for location ${locationId}: ${validAccessToken}`);
              // Read the success HTML file
-          const successHtml = fs.readFileSync(path.join(__dirname, '../html', 'accessTokenFetchSuccess.html'), 'utf-8');
+          const successHtml = fs.readFileSync(path.join(__dirname, '../public/html', 'accessTokenFetchSuccess.html'), 'utf-8');
           
           // Replace placeholders with actual data
           const responseHtml = successHtml
