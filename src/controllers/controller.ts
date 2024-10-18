@@ -34,6 +34,6 @@ export async function formSubmit(req:Request,res:Response){
 }
 
 export async function getPayload(req:Request,res:Response){
-    console.log("payload : "+req.body)
+    console.log("payload: " + JSON.stringify(req.body, null, 2));
     res.status(200).send("Payload recieved successfully")
 }
