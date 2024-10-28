@@ -224,6 +224,7 @@ async function updateContactWithTags(to_phone_number:any,contactId:string,locati
 
         if (rows.length===0) {
             console.log("No phone record found in the database");
+            return
         } else {
             console.log("Record found:", rows);
             const tags = rows[0]
