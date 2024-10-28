@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Data Table</title>
+    <link href="https://dashboard.kashcallerai.com/static/css/bootstrap5.css" rel="stylesheet">
+    <link href="https://dashboard.kashcallerai.com/static/css/select2.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            margin: 20px;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        table {
+            width: 100%;
+            margin: auto;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border: 1px solid #dee2e6;
+        }
+        th {
+            background-color: #007bff;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Phone Data Records</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Phone Number</th>
+                <th>Source Tag</th>
+                <th>Campaign Tag</th>
+                <th>Vendor Tag</th>
+                <th>Location Tag</th>
+                <th>Case Type Tag</th>
+                <th>Medium Tag</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody">
+            <!-- Rows will be injected here -->
+        </tbody>
+    </table>
+</body>
+</html>

@@ -1,9 +1,10 @@
 import express from 'express'
-import { formSubmit, getForm, getPayload } from '../controllers/controller'
+import { formSubmit, getForm, getPayload, viewTableData } from '../controllers/controller'
 import { captureCode, formSubmission, getAccessToken, initiateAuth } from '../controllers/authController'
 const router = express.Router()
 
 router.get('/form',getForm)
+router.get('/table',viewTableData)
 router.post('/formSubmit',formSubmit)
 
 router.get('/',getAccessToken)
