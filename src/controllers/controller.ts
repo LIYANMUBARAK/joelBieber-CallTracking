@@ -83,7 +83,8 @@ export async function viewTableData(req: Request, res: Response) {
 
     } catch (error) {
         console.log("Error retrieving table data:", error);
-        res.status(500).send("Error retrieving data.");
+        if(connection) connection.release()
+        res.status(200).send("Error retrieving data.");
     } finally {
         if (connection) connection.release();
     }
@@ -114,11 +115,15 @@ export async function getPayload(req:Request,res:Response){
 
     const callData = await getAllCalls(id_token,locationId,three_days_ago_string,currentDateToString,contactId,recordId)
     if(!callData){
+        if(connection) connection.release()
         res.status(200).send("Call data not found")
+        
     }else{
         const toPhoneNumber = callData.to
         await updateContactWithTags(toPhoneNumber,contactId,locationId,recordId)
+        if(connection) connection.release()
         res.status(200).send("Payload recieved successfully")
+        
     }
 
   
@@ -209,6 +214,9 @@ async function getAllCalls(idToken:string, ghl_location_id:string, three_days_ag
 
     } catch (error) {
         console.error('Error fetching calls:', error);
+        
+    }finally{
+        if(connection) connection.release()
     }
 }
 
@@ -267,8 +275,9 @@ async function updateContactWithTags(to_phone_number:any,contactId:string,locati
         }
     } catch (error) {
         console.error('Error executing query:', error);
+      
     } finally {
-        connection.release(); 
+        if(connection) connection.release()
     }
 }
 
